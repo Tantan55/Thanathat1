@@ -3,40 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ไอมอส</title>
+    <title>ไอมอสเลื่อนลงแบบกวนๆ</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #00ff00;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #111;
+            color: #ff00ff;
             overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
-        .text-container {
+        .line {
+            font-size: 2rem;
             text-align: center;
-            font-size: 3rem;
-            animation: glow 1.5s infinite alternate;
+            position: absolute;
+            width: 100%;
+            animation: scroll 3s linear infinite;
         }
-        @keyframes glow {
+        @keyframes scroll {
             0% {
-                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+                transform: translateY(-5%);
             }
             100% {
-                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+                transform: translateY(110vh);
             }
+        }
+        .line:nth-child(even) {
+            color: #00ff00;
+            transform: rotate(-2deg);
+        }
+        .line:nth-child(odd) {
+            color: #ff4500;
+            transform: rotate(2deg);
         }
     </style>
 </head>
 <body>
-    <div class="text-container">
-        <div>ไอมอส ไอมอส ไอมอส ไอมอส</div>
-        <div>ไอมอส ไอมอส ไอมอส ไอมอส</div>
-        <div>ไอมอส ไอมอส ไอมอส ไอมอส</div>
-        <div>ไอมอส ไอมอส ไอมอส ไอมอส</div>
-    </div>
+    <div class="line">ไอมอส</div>
+    <div class="line">ไอมอส ไอมอส</div>
+    <div class="line">ไอมอส ไอมอส ไอมอส</div>
+    <div class="line">ไอมอส</div>
+    <div class="line">ไอมอส ไอมอส</div>
+    <div class="line">ไอมอส ไอมอส ไอมอส</div>
 </body>
 </html>
