@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ไอมอส</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .text-container {
+            text-align: center;
+            font-size: 3rem;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+            }
+            100% {
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div>ไอมอส ไอมอส ไอมอส ไอมอส</div>
+        <div>ไอมอส ไอมอส ไอมอส ไอมอส</div>
+        <div>ไอมอส ไอมอส ไอมอส ไอมอส</div>
+        <div>ไอมอส ไอมอส ไอมอส ไอมอส</div>
+    </div>
+</body>
+</html>
